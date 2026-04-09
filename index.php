@@ -42,5 +42,5 @@ if (array_key_exists($aktualis_oldal, $menu_elemek)) {
         <?php include 'includes/footer.php'; ?>
     </div>
 </body>
-teszt
+
 </html>
