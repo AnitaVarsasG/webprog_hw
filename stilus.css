@@ -45,7 +45,6 @@ img {
 .top-navbar {
     background-color: #ff6600;
     width: 100%;
-    /* TELJES SZÉLESSÉG */
     padding: 15px 20px;
     border-radius: 8px;
     display: flex;
@@ -218,10 +217,6 @@ img {
     margin-top: 15px;
 }
 
-/* =========================================================
-RESZPONSZÍV NÉZET MOBILRA
-   ========================================================= */
-
 @media (max-width: 768px) {
     body {
         padding: 10px;
@@ -237,7 +232,6 @@ RESZPONSZÍV NÉZET MOBILRA
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        /* Középre rendezzük a linkeket */
         gap: 12px;
     }
 
