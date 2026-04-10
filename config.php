@@ -1,5 +1,4 @@
 <?php
-// A menüpontok dinamikus listája
 $menu_elemek = [
     'cimlap'       => ['cim' => 'Címlap',       'file' => 'cimlap.php'],
     'bemutatkozas' => ['cim' => 'Bemutatkozás', 'file' => 'bemutatkozas.php'],

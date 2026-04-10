@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,55 +16,90 @@ body {
     margin: 0 auto;
 }
 
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .site-header {
     background-color: #ffff00;
-    /* Sárga fejléc */
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
+    text-align: center;
 }
+
 
 .middle-section {
     display: flex;
+    flex-direction: column;
+    
     gap: 15px;
     margin-bottom: 15px;
 }
 
-.sidebar {
+
+.sidebar,
+.top-navbar {
     background-color: #ff6600;
-    /* Narancs menü */
-    width: 200px;
-    padding: 15px;
+    width: 100%;
+    padding: 15px 20px;
     border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
 }
 
 .menu-list {
     list-style-type: none;
+    display: flex;
+    gap: 20px;
+    
 }
 
 .menu-list li {
-    margin-bottom: 10px;
+    margin-bottom: 0;
+    
 }
 
 .menu-list a,
 .user-management a {
     text-decoration: none;
-    color: #0000ff;
+    color: black;
+    
+    font-weight: bold;
 }
 
-.menu-list a:hover {
+.menu-list a:hover,
+.user-management a:hover {
     text-decoration: underline;
 }
 
+.menu-list a.active-link {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .user-management {
-    margin-top: 20px;
+    margin-top: 0;
+    
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+.user-management hr {
+    display: none;
 }
 
 .content {
     background-color: #99ffcc;
-    /* Zöldes tartalom rész */
-    flex: 1;
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #ccc;
@@ -84,14 +120,14 @@ body {
 
 .site-footer {
     background-color: #cc99ff;
-    /* Lila lábléc */
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 14px;
+    text-align: center;
 }
 
-/* Űrlap formázása */
+
 .user-form {
     max-width: 400px;
     background-color: #ffffff;
@@ -119,6 +155,28 @@ body {
     box-sizing: border-box;
 }
 
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.form-group input.is-invalid,
+.form-group textarea.is-invalid {
+    border-color: #cc0000;
+    outline: 2px solid rgba(204, 0, 0, 0.15);
+}
+
+.form-hint {
+    margin-top: 6px;
+    margin-bottom: 0;
+    font-size: 13px;
+    color: #444;
+}
+
 .btn {
     background-color: #0000ff;
     color: #ffffff;
@@ -127,9 +185,26 @@ body {
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    width: 100%;
 }
 
 .btn:hover {
+    background-color: #0000cc;
+}
+
+.btn-small {
+    background-color: #0000ff;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: auto;
+    font-size: 14px;
+}
+
+.btn-small:hover {
     background-color: #0000cc;
 }
 
@@ -140,4 +215,47 @@ body {
     border-radius: 4px;
     border: 1px solid #c3e6cb;
     margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    
+    .sidebar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .menu-list li {
+        background-color: #ffffff;
+        padding: 10px 14px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+
+    .menu-list a {
+        color: #0000ff;
+        
+    }
+
+    .user-management {
+        width: 100%;
+        justify-content: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        
+        padding-top: 15px;
+    }
+
+    .user-form {
+        max-width: 100%;
+    }
 }
