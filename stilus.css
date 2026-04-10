@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.site-header {
+    background-color: #ffff00;
+    /* Sárga fejléc */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+.middle-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.sidebar {
+    background-color: #ff6600;
+    /* Narancs menü */
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.menu-list {
+    list-style-type: none;
+}
+
+.menu-list li {
+    margin-bottom: 10px;
+}
+
+.menu-list a,
+.user-management a {
+    text-decoration: none;
+    color: #0000ff;
+}
+
+.menu-list a:hover {
+    text-decoration: underline;
+}
+
+.user-management {
+    margin-top: 20px;
+}
+
+.content {
+    background-color: #99ffcc;
+    /* Zöldes tartalom rész */
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.content h2 {
+    margin-bottom: 15px;
+}
+
+.content h3 {
+    margin: 15px 0 5px 0;
+}
+
+.content p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.site-footer {
+    background-color: #cc99ff;
+    /* Lila lábléc */
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Űrlap formázása */
+.user-form {
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: #0000ff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #0000cc;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #c3e6cb;
+    margin-top: 15px;
+}
