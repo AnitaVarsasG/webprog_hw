@@ -2,7 +2,7 @@
 session_start(); // Munkamenet (Session) elindítása a felhasználókezeléshez
 require_once 'config.php';
 
-// Megnézzük, hogy melyik oldalt kérték az URL-ben. Ha semmit, a címlap az alapértelmezett.
+// Megnézzük, hogy melyik oldalt kérték az URL-ben. Ha semmit, a címlap az alapértelmezett. 
 $aktualis_oldal = isset($_GET['page']) ? $_GET['page'] : 'cimlap';
 
 // Biztonsági ellenőrzés: csak olyan oldalt töltünk be, ami létezik a config-ban
@@ -25,6 +25,7 @@ if (array_key_exists($aktualis_oldal, $menu_elemek)) {
     <meta charset="UTF-8">
     <title>Mini honlap</title>
     <link rel="stylesheet" href="stilus.css">
+    <script src="main.js" defer></script>
 </head>
 
 <body>

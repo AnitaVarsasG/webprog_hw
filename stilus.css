@@ -79,6 +79,11 @@ img {
     text-decoration: underline;
 }
 
+.menu-list a.active-link {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .user-management {
     margin-top: 0;
     
@@ -151,6 +156,28 @@ img {
     box-sizing: border-box;
 }
 
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.form-group input.is-invalid,
+.form-group textarea.is-invalid {
+    border-color: #cc0000;
+    outline: 2px solid rgba(204, 0, 0, 0.15);
+}
+
+.form-hint {
+    margin-top: 6px;
+    margin-bottom: 0;
+    font-size: 13px;
+    color: #444;
+}
+
 .btn {
     background-color: #0000ff;
     color: #ffffff;
@@ -163,6 +190,22 @@ img {
 }
 
 .btn:hover {
+    background-color: #0000cc;
+}
+
+.btn-small {
+    background-color: #0000ff;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: auto;
+    font-size: 14px;
+}
+
+.btn-small:hover {
     background-color: #0000cc;
 }
 

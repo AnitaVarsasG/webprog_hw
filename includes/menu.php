@@ -7,11 +7,10 @@
     
     <div class="user-management">
         <?php if (isset($_SESSION['bejelentkezve']) && $_SESSION['bejelentkezve'] === true): ?>
-            <span>Szia, felhasználó!</span>
+            <span>Szia, <?php echo htmlspecialchars($_SESSION['login_nev']); ?>!</span>
             <a href="index.php?page=kilepes" class="btn-small">Kilépés</a>
         <?php else: ?>
-            <a href="index.php?page=belepes">Belépés</a> | 
-            <a href="index.php?page=regisztracio">Regisztráció</a>
+            <a href="index.php?page=belepes">Belépés</a>
         <?php endif; ?>
     </div>
 </nav>
