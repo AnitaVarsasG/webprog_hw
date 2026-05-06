@@ -1,70 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
 header {
-    border-radius: 10px;
-    background-color: yellow;
-    padding: 10px;
-    margin: 10px;
+    background-color: #1E459E;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 header img {
-    float: left;
-    margin: 20px 10px 0px 10px;
-}
-
-div#wrapper {
-    margin: 10px;
-}
-
-aside {
-    display: table-cell;
-    vertical-align: top;
-}
-
-nav {
-    margin: 0px 10px 0px 0px;
-    top: 0px;
-    border-radius: 10px;
-    background-color: #FF6600;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 15px 0px;
-}
-
-nav ul li {
-    padding: 0px 15px;;
-}
-
-nav ul li.active {
-    border-right: 5px solid blue;
-}
-
-nav ul a {
-    text-decoration: none;
-    color: blue;
-}
-
-div#content {
-    display: table-cell;
-    width: 100%;
-    border-radius: 10px;
-    background-color: #99FFCC;
-    padding: 15px;
-}
-
-div#content img{
-    float: right;
-    width: 20em;
+    max-width: 90px;
     height: auto;
-    margin: 0 0 15px 15px;
-    padding: 3px;
-    border: 3px solid blue;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+header h1 {
+    margin: 5px 0;
+}
+
+header h2 {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+/* VÍZSZINTES MENÜ */
+nav#menu {
+    background-color: #FF6600;
+    margin: 0;
+}
+
+nav#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav#menu ul li {
+    margin: 0;
+}
+
+nav#menu ul li a {
+    display: block;
+    padding: 15px 22px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav#menu ul li a:hover {
+    background-color: #cc5200;
+}
+
+nav#menu ul li.active a {
+    background-color: #1E459E;
+}
+
+/* TARTALOM */
+main#content {
+    max-width: 1100px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    min-height: 400px;
+}
+
+main#content img {
+    max-width: 100%;
+    height: auto;
 }
 
 footer {
-    border-radius: 10px;
-    margin: 10px;
-    padding: 5px 20px;
-    background-color: #CC99FF;
+    background-color: #1E459E;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Reszponzív rész */
+@media screen and (max-width: 600px) {
+    nav#menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav#menu ul li a {
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    main#content {
+        margin: 10px;
+        padding: 15px;
+    }
 }

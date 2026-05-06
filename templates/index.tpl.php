@@ -15,24 +15,23 @@
 		<?php if (isset($fejlec['motto'])) { ?><h2><?= $fejlec['motto'] ?></h2><?php } ?>
 		<?php if(isset($_SESSION['login'])) { ?>Bejlentkezve: <strong><?= $_SESSION['csn']." ".$_SESSION['un']." (".$_SESSION['login'].")" ?></strong><?php } ?>
 	</header>
-    <div id="wrapper">
-        <aside id="nav">
-            <nav>
-                <ul>
-					<?php foreach ($oldalak as $url => $oldal) { ?>
-						<?php if(! isset($_SESSION['login']) && $oldal['menun'][0] || isset($_SESSION['login']) && $oldal['menun'][1]) { ?>
-							<li<?= (($oldal == $keres) ? ' class="active"' : '') ?>>
-							<a href="<?= ($url == '/') ? '.' : $url ?>">
-							<?= $oldal['szoveg'] ?></a>
-							</li>
-						<?php } ?>
-					<?php } ?>
-                </ul>
-            </nav>
-        </aside>
-        <div id="content">
-            <?php include("./templates/pages/{$keres['fajl']}.tpl.php"); ?>
-        </div>
+<nav id="menu">
+    <ul>
+        <?php foreach ($oldalak as $url => $oldal) { ?>
+            <?php if(! isset($_SESSION['login']) && $oldal['menun'][0] || isset($_SESSION['login']) && $oldal['menun'][1]) { ?>
+                <li<?= (($oldal == $keres) ? ' class="active"' : '') ?>>
+                    <a href="<?= ($url == '/') ? '.' : $url ?>">
+                        <?= $oldal['szoveg'] ?>
+                    </a>
+                </li>
+            <?php } ?>
+        <?php } ?>
+    </ul>
+</nav>
+
+<main id="content">
+    <?php include("./templates/pages/{$keres['fajl']}.tpl.php"); ?>
+</main>
     </div>
     <footer>
         <?php if(isset($lablec['copyright'])) { ?>&copy;&nbsp;<?= $lablec['copyright'] ?> <?php } ?>
