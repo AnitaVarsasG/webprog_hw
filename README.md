@@ -1,2 +1,0 @@
-# webprog_hw
-működhetnemár
