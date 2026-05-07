@@ -38,5 +38,8 @@
 		&nbsp;
         <?php if(isset($lablec['ceg'])) { ?><?= $lablec['ceg']; ?><?php } ?>
     </footer>
+    <?php if(file_exists('./scripts/'.$keres['fajl'].'.js')) { ?>
+    <script src="./scripts/<?= $keres['fajl']?>.js"></script>
+<?php } ?>
 </body>
 </html>

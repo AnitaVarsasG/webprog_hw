@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: #1E459E;
+    background-color: #a3cba5;
     color: white;
     padding: 20px;
     text-align: center;
@@ -35,7 +35,7 @@ header h2 {
 
 /* VÍZSZINTES MENÜ */
 nav#menu {
-    background-color: #FF6600;
+    background-color: #2e7d32;
     margin: 0;
 }
 
@@ -61,11 +61,11 @@ nav#menu ul li a {
 }
 
 nav#menu ul li a:hover {
-    background-color: #cc5200;
+    background-color: #2e7d6c;
 }
 
 nav#menu ul li.active a {
-    background-color: #1E459E;
+    background-color: #a3cba5;
 }
 
 /* TARTALOM */
@@ -84,7 +84,7 @@ main#content img {
 }
 
 footer {
-    background-color: #1E459E;
+    background-color: #a3cba5;
     color: white;
     text-align: center;
     padding: 15px;
