@@ -1,45 +1,15 @@
 <?php
-session_start(); // Munkamenet (Session) elindítása a felhasználókezeléshez
-require_once 'config.php';
-
-$aktualis_oldal = isset($_GET['page']) ? $_GET['page'] : 'cimlap';
-
-if (array_key_exists($aktualis_oldal, $menu_elemek)) {
-    $betoltendo_fajl = 'pages/' . $menu_elemek[$aktualis_oldal]['file'];
-} elseif ($aktualis_oldal == 'belepes') {
-    $betoltendo_fajl = 'pages/belepes.php';
-} elseif ($aktualis_oldal == 'kilepes') {
-    $betoltendo_fajl = 'pages/kilepes.php';
-} elseif ($aktualis_oldal == 'regisztracio') { 
-    $betoltendo_fajl = 'pages/regisztracio.php'; 
-} else {
-    $betoltendo_fajl = 'pages/404.php';
-}
+	include('./includes/config.inc.php');
+	$oldal = $_SERVER['QUERY_STRING'];
+	if ($oldal!="") {
+		if (isset($oldalak[$oldal]) && file_exists("./templates/pages/{$oldalak[$oldal]['fajl']}.tpl.php")) {
+			$keres = $oldalak[$oldal];
+		}
+		else { 
+			$keres = $hiba_oldal;
+			header("HTTP/1.0 404 Not Found");
+		}
+	}
+	else $keres = $oldalak['/'];
+	include('./templates/index.tpl.php'); 
 ?>
-<!DOCTYPE html>
-<html lang="hu">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Mini honlap</title>
-    <link rel="stylesheet" href="stilus.css">
-    <script src="main.js" defer></script>
-</head>
-
-<body>
-    <div class="container">
-        <?php include 'includes/header.php'; ?>
-
-        <div class="middle-section">
-            <?php include 'includes/menu.php'; ?>
-
-            <div class="content">
-                <?php include $betoltendo_fajl; ?>
-            </div>
-        </div>
-
-        <?php include 'includes/footer.php'; ?>
-    </div>
-</body>
-
-</html>
